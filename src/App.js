@@ -28,8 +28,8 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
-      <header className='App-header'>
+    <div className="App">
+      <header className="App-header">
         {loading && <h3>Loading Notifications...</h3>}
 
         {!loading && notifications.length === 0 && (
@@ -42,10 +42,10 @@ function App() {
         {notifications.map((notif, key) => {
           return (
             <a
-              className='link-to-so'
+              className="link-to-so"
               href={notif.source}
-              rel='noopener noreferrer'
-              target='_blank'
+              rel="noopener noreferrer"
+              target="_blank"
               key={key}
             >
               <p
@@ -60,7 +60,7 @@ function App() {
                 <span>{notif.type}</span>
                 <span>{notif.created}</span>
               </p>
-              <p className='App-link' style={{ fontSize: 14, margin: 0 }}>
+              <p className="App-link" style={{ fontSize: 14, margin: 0 }}>
                 {notif.title}
               </p>
               <p style={{ fontSize: 12, margin: 0 }}>{notif.comment}</p>
